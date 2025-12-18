@@ -1,0 +1,21 @@
+from microbit import *
+import neopixel
+
+np = neopixel.NeoPixel(pin15, 2)
+
+colors = [
+    (255, 0, 0),    # Red
+    (0, 255, 0),    # Green
+    (0, 0, 255),    # Blue
+    (255, 255, 0),  # Yellow
+    (0, 255, 255),  # Cyan
+    (255, 0, 255),  # Magenta
+    (255, 255, 255) # White
+]
+
+while True:
+    for color in colors:
+        np[0] = color   # LED1
+        np[1] = color   # LED2
+        np.show()
+        sleep(1000)
